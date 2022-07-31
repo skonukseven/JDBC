@@ -9,6 +9,7 @@ public class CallableStatements02 {
 
         String sql1 = "create or replace procedure findMinP( in a  int, in b int, out c  int) language plpgsql as $$  begin if a<b then c:=a; else c:=b; end if; end; $$;";
         st.execute(sql1);
+
         CallableStatement cst1 = con.prepareCall("{ call findMinP(?,?,?)}");
 
         cst1.setInt(1,5);
