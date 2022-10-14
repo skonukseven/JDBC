@@ -20,7 +20,7 @@ public class CallableStatements01 {
         // see the result on the console
         System.out.println(cst1.getInt(1));
 
-
+        System.out.println(cst1.getInt(1));
 
         con.close();
         st.close();
